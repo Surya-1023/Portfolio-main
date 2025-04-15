@@ -2,7 +2,6 @@
 
 import { cn } from "@/utils/cn";
 import { GlobeDemo } from "./GridGlobe";
-import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from '@/data/confetti.json';
 import MagicButton from "./MagicButton";
@@ -13,6 +12,9 @@ const BackgroundGradientAnimation = dynamic(
   () => import("./GradientBg").then((mod) => mod.BackgroundGradientAnimation),
   { ssr: false }
 );
+
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 export const BentoGrid = ({
   className,
